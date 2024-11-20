@@ -30,3 +30,10 @@ cp "Assets/Samples/XR Interaction Toolkit/3.0.7/Starter Assets/DemoScene.unity" 
 5. In Project Settings -> XR Plugin Management:
     - Clicked "Install XR Plugin Management".
     - In the Android tab -> Plug-in Providers, enabled Oculus.
+
+## Troubleshooting
+
+3D WebView's prefabs detect input through Unity's event system like described in [this article](https://support.vuplex.com/articles/clicking). In the case of XR Interaction Toolkit, the scene's [XRUIInputModule](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/api/UnityEngine.XR.Interaction.Toolkit.UI.XRUIInputModule.html) sends input through Unity's event system, which 3D WebView's prefabs then detect. If your CanvasWebViewPrefab and CanvasKeyboard aren't responding to clicks or scrolling, then that indicates that your scene is not configured correctly. I recommend using this project as a reference and verifying the following settings in your scene:
+
+- The canvas must have a [TrackedDeviceGraphicRaycaster](https://docs.unity3d.com/Packages/com.unity.xr.interaction.toolkit@3.0/api/UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster.html) attached to it.
+- The canvas's [Event Camera](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/class-Canvas.html#properties) must be set to the scene's main camera.
