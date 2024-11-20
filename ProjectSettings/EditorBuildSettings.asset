@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/XritWebViewDemo.unity
-    guid: f646071126b25460a9a5f078b5c43e69
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 12133d5861b684eacb3fc6903153ff6e, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 68bf03ed29e65491bace54c17bf5ed26, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_UseUCBPForAssetBundles: 0
